@@ -74,6 +74,7 @@ public class GroceryListController {
 		}
 	}
 	
+	@CrossOrigin(origins = "*")
 	@PostMapping(path = "/{id}/item/new")
 	public ResponseEntity<String> createItem(@RequestBody LinkedHashMap groceryItem, @PathVariable("id") int id) {
 		GroceryList gList = gListServ.retrieveGroceryListById(id);
